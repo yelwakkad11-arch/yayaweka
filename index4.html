@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YAYAWEKA | Official</title>
+<style>
+• { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: 'Segoe UI', Tahoma, sans-serif;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: #fff;
+padding: 40px 20px;
+overflow-x: hidden;
+background: #0a0a14 url('https://files.kick.com/images/user/128063480/profile_image/conversion/b033c6e6-e8a6-4792-9113-ad48f28b6ec3-fullsize.webp') center/cover no-repeat fixed;
+}
+
+/* طبقة تعتيم متدرجة فوق الخلفية عشان الكلام يبان */
+body::before {
+content: '';
+position: fixed;
+inset: 0;
+background: linear-gradient(180deg, rgba(10,10,20,.75), rgba(10,10,20,.9));
+z-index: 0;
+}
+
+.glow {
+position: fixed;
+width: 500px; height: 500px;
+border-radius: 50%;
+filter: blur(120px);
+opacity: .25;
+z-index: 0;
+animation: float 10s infinite alternate ease-in-out;
+}
+.glow.purple { background: #7b2ff7; top: -150px; left: -100px; }
+.glow.blue { background: #2f80f7; bottom: -150px; right: -100px; animation-delay: 2s; }
+@keyframes float { to { transform: translate(60px, 40px) scale(1.15); } }
+
+.container { position: relative; z-index: 1; text-align: center; max-width: 420px; width: 100%; }
+
+.avatar {
+width: 110px; height: 110px;
+margin: 0 auto 20px;
+border-radius: 50%;
+object-fit: cover;
+border: 3px solid rgba(167, 139, 250, .5);
+box-shadow: 0 0 40px rgba(123, 47, 247, .6);
+animation: pulse 3s infinite ease-in-out;
+}
+@keyframes pulse { 50% { box-shadow: 0 0 70px rgba(123, 47, 247, .9); } }
+
+h1 {
+font-size: 32px;
+font-weight: 900;
+letter-spacing: 3px;
+background: linear-gradient(90deg, #a78bfa, #60a5fa);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.badge {
+display: inline-block;
+margin-top: 8px;
+padding: 5px 18px;
+border: 1px solid rgba(255,255,255,.25);
+border-radius: 50px;
+font-size: 12px;
+letter-spacing: 4px;
+color: #cbd5e1;
+text-transform: uppercase;
+background: rgba(0,0,0,.3);
+}
+
+.tagline { margin-top: 14px; color: #cbd5e1; font-size: 14px; line-height: 1.8; }
+
+.links { margin-top: 35px; display: flex; flex-direction: column; gap: 14px; }
+
+.link {
+display: flex; align-items: center; gap: 14px;
+padding: 15px 20px;
+background: rgba(10, 10, 20, .55);
+border: 1px solid rgba(255,255,255,.15);
+border-radius: 14px;
+text-decoration: none;
+color: #fff;
+font-weight: 600;
+backdrop-filter: blur(10px);
+transition: .25s;
+}
+.link:hover {
+transform: translateY(-3px) scale(1.02);
+background: rgba(123, 47, 247, .35);
+border-color: rgba(167, 139, 250, .6);
+box-shadow: 0 10px 30px rgba(123, 47, 247, .35);
+}
+.link .icon { font-size: 20px; width: 28px; text-align: center; }
+.link .arrow { margin-inline-start: auto; opacity: .5; }
+
+footer { margin-top: 45px; color: #cbd5e1; font-size: 12px; letter-spacing: 1px; z-index: 1; }
+
+.fade { opacity: 0; transform: translateY(15px); animation: fadeUp .7s forwards; }
+.fade:nth-child(1) { animation-delay: .1s; } .fade:nth-child(2) { animation-delay: .25s; }
+.fade:nth-child(3) { animation-delay: .4s; } .fade:nth-child(4) { animation-delay: .55s; }
+.fade:nth-child(5) { animation-delay: .7s; } .fade:nth-child(6) { animation-delay: .85s; }
+@keyframes fadeUp { to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+
+<div class="glow purple"></div>
+<div class="glow blue"></div>
+
+<div class="container">
+<img class="avatar fade" src="https://files.kick.com/images/user/128063480/profile_image/conversion/b033c6e6-e8a6-4792-9113-ad48f28b6ec3-fullsize.webp" alt="YAYAWEKA">
+<h1 class="fade">YAYAWEKA</h1>
+<div class="badge fade">Official Community</div>
+<p class="tagline fade">كل روابطّي الرسمية في مكان واحد — تابعني وانضم للمجتمع.</p>
+
+<div class="links">
+<a class="link fade" href="https://kick.com/yayaweka" target="_blank"><span class="icon">🟢</span> كيك <span class="arrow">←</span></a>
+<a class="link fade" href="https://whatsapp.com/channel/0029VbEWWie1iUxgXUbzvf41" target="_blank"><span class="icon">💬</span> واتس اب <span class="arrow">←</span></a>
+</div>
+
+<footer class="fade">© 2026 YAYAWEKA</footer>
+</div>
+
+</body>
+</html>
